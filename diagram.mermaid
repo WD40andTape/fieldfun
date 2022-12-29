@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph main["<b>S = fieldfun(fun,S<sub>1</sub>,S<sub>2</sub>,...,S<sub>N</sub>)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
+        direction LR
+        s1[/"<b>S<sub>1</sub></b>&lt;struct&gt;<hr/><b>field<sub>1</sub></b>: <i>value</i><sub>1,1</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>2</sub></b>: <i>value</i><sub>1,2</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>M</sub></b>: <i>value</i><sub>1,M</sub>&nbsp;&nbsp;&nbsp;"/]
+        s2[/"<b>S<sub>2</sub></b>&lt;struct&gt;<hr/><b>field<sub>1</sub></b>: <i>value</i><sub>2,1</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>2</sub></b>: <i>value</i><sub>2,2</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>M</sub></b>: <i>value</i><sub>2,M</sub>&nbsp;&nbsp;&nbsp;"/]
+        s3[/"<b>S<sub>N</sub></b>&lt;struct&gt;<hr/><b>field<sub>1</sub></b>: <i>value</i><sub>N,1</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>2</sub></b>: <i>value</i><sub>N,2</sub>&nbsp;&nbsp;&nbsp;<br /><b>field<sub>M</sub></b>: <i>value</i><sub>N,M</sub>&nbsp;&nbsp;&nbsp;"/]
+        fun["<b>fun</b>&lt;function_handle&gt;"]
+        s[/"<b>S</b>&lt;struct&gt;<hr/><b>field<sub>1</sub></b>: fun( <i>value</i><sub>1,1</sub> , <i>value</i><sub>2,1</sub> , <i>value</i><sub>N,1</sub> )&nbsp;&nbsp;&nbsp;<br /><b>field<sub>2</sub></b>: fun( <i>value</i><sub>1,2</sub> , <i>value</i><sub>2,2</sub> , <i>value</i><sub>N,2</sub> )&nbsp;&nbsp;&nbsp;<br /><b>field<sub>M</sub></b>: fun( <i>value</i><sub>1,M</sub> , <i>value</i><sub>2,M</sub> , <i>value</i><sub>N,M</sub> )&nbsp;&nbsp;&nbsp;"/]
+    end
+    s1 & s2 & s3 --> fun --> s
+    style main fill:#ffffff
